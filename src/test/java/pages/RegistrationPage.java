@@ -21,12 +21,12 @@ public class RegistrationPage {
             numberInput = $("#userNumber"),
             dayOfBirthInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
-            inputPicture=$("#uploadPicture"),
-            currentAdressInput=$("#currentAddress"),
-            stateInput=$("#state"),
-            cityInput=$("#city"),
-            submitButton=$("#submit"),
-            tableHeader=$(".modal-header"),
+            inputPicture = $("#uploadPicture"),
+            currentAdressInput = $("#currentAddress"),
+            stateInput = $("#state"),
+            cityInput = $("#city"),
+            submitButton = $("#submit"),
+            tableHeader = $(".modal-header"),
             resultsTable = $(".table-responsive");
 
 
@@ -67,39 +67,39 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage fillSubjects (String subject) {
+    public RegistrationPage fillSubjects(String subject) {
         subjectsInput.setValue(subject).pressEnter();
         return this;
     }
 
-    public RegistrationPage setHobbies (String hobby) {
+    public RegistrationPage setHobbies(String hobby) {
         $(byText(hobby)).scrollTo().click();
         return this;
     }
 
-    public RegistrationPage uploadPicture (String fileName) {
+    public RegistrationPage uploadPicture(String fileName) {
         $(inputPicture).uploadFromClasspath(fileName);
         return this;
     }
 
-    public RegistrationPage setCurrentAddress (String currentAddress){
+    public RegistrationPage setCurrentAddress(String currentAddress) {
         $(currentAdressInput).setValue(currentAddress);
         return this;
     }
 
-    public RegistrationPage setState (String state){
+    public RegistrationPage setState(String state) {
         $(stateInput).click();
         $(byText(state)).click();
         return this;
     }
 
-    public RegistrationPage setCity (String city){
+    public RegistrationPage setCity(String city) {
         $(cityInput).click();
         $(byText(city)).click();
         return this;
     }
 
-    public RegistrationPage submit (){
+    public RegistrationPage submit() {
         submitButton.click();
         return this;
     }
